@@ -4,7 +4,6 @@ import Senator from "./Senator";
 import Summary from "./Summary";
 import "./App.css";
 
-// TODO make filter colors persist after clicking them
 // TODO make quote accessible in mobile view
 // TODO fix responsivenesss on mobile
 // TODO deploy to netlify
