@@ -30,6 +30,7 @@ h1 {
   top: 0;
   text-align: center;
 }
+
 .header-row .quote {
   font-weight: 700;
 }
@@ -67,6 +68,9 @@ h1 {
   text-decoration: none;
   color: #000;
 }
+.state {
+  justify-self: center;
+}
 .state,
 .senator,
 .status {
@@ -95,10 +99,51 @@ h1 {
   }
   .senatorContainer,
   .header-row {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr 1.5fr;
+  }
+  .header-row .quote {
+    display: none;
+  }
+  .senatorContainer {
+    grid-template-rows: 1fr auto;
+  }
+  .state {
+    justify-self: center;
+    text-align: center;
+  }
+  .status {
+    flex-direction: column;
+    align-items: center;
+  }
+  .call-now {
+    padding: 6px 12px;
+    margin-top: 5px;
+  }
+  .view-source {
+    font-weight: 300;
+    margin-top: 10px;
   }
   .quote {
-    display: none;
+    grid-column: 1 / -1;
+    background-color: #f6f6f6;
+    height: 0;
+    overflow: hidden;
+    padding: 0 25px !important;
+    transition: all 0.2s ease-in-out;
+    /* animation: open-down 3s; */
+  }
+  .open-source {
+    height: auto;
+    padding: 25px !important;
+  }
+  @keyframes open-down {
+    0% {
+      /* padding: 15px !important; */
+      height: 0;
+    }
+    100% {
+      height: auto;
+    }
   }
 }
 

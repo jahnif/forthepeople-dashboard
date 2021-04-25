@@ -6,7 +6,6 @@ import "./App.css";
 
 // TODO make quote accessible in mobile view
 // TODO fix responsivenesss on mobile
-// TODO deploy to netlify
 
 function App() {
   let [senators, setSenators] = useState([]);
