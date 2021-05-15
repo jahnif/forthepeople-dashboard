@@ -16,13 +16,19 @@ const Senator = ({ state, senator, quote, date, source, status, link }) => {
             {senator}
           </div>
           <div className={`status ${status !== "Yes" ? "uncommitted" : ""}`}>
-            {status}{" "}
             {status === "Yes" ? (
-              "⭐"
+              <React.Fragment>
+                {status}
+                <br/>
+                {"⭐"}
+              </React.Fragment>
             ) : (
-              <div className="call-now">
-                <a href="https://votesaveamerica.com/calltool/">Call Now 📞</a>
-              </div>
+              <React.Fragment>
+                {status + "❓"}  
+                <div className="call-now">
+                  <a href="https://votesaveamerica.com/calltool/">Call Now</a>
+                </div>
+              </React.Fragment>
             )}
           </div>
           <div className="quote">
@@ -42,13 +48,19 @@ const Senator = ({ state, senator, quote, date, source, status, link }) => {
             {senator}
           </div>
           <div className={`status ${status !== "Yes" ? "uncommitted" : ""}`}>
-            {status}{" "}
-            {status === "Yes" ? (
-              "⭐"
+          {status === "Yes" ? (
+              <React.Fragment>
+                {status}
+                <br/>
+                {"⭐"}
+              </React.Fragment>
             ) : (
-              <div className="call-now">
-                <a href="https://votesaveamerica.com/calltool/">Call Now 📞</a>
-              </div>
+              <React.Fragment>
+                {status + "❓"}  
+                <div className="call-now">
+                  <a href="https://votesaveamerica.com/calltool/">Call Now</a>
+                </div>
+              </React.Fragment>
             )}
             <div className="view-source" onClick={toggleViewSource}>
               {viewSource ? "-" : "+"} View Source
